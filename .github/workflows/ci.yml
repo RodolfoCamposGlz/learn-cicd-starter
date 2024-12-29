@@ -30,7 +30,7 @@ jobs:
 
     steps:
       - name: Run style check
-        run: go fmt ./...
+        run: test -z $(go fmt ./...)
 
       - name: Force to succeed
         run: (exit 0)
